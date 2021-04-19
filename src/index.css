@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.logo {
+    animation: fadein 0.3s linear;
+    width: 27px;
+    position: relative;
+    bottom: 1px;
+}
+
+.submit-btn {
+    min-width: 70px;
+}
+
+nav {
+    background: #007bff;
+    border-bottom: 1px solid #b5b5b5;
+    cursor: default;
+}
+
+
+table {
+    font-size: 0.8rem;
+    animation: fadein 0.3s linear
+}
+
+table tr th {
+    font-weight: 500;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.hash-td {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
