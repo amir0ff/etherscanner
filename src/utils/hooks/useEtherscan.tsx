@@ -46,7 +46,7 @@ function useEtherscan(): [(address: string) => void, Transaction[], string, bool
             setTransactions([]);
             setIsLoading(true);
             try {
-                await axios.get(`https://api.etherscan.io/api?module=account&action=txlist&address=${address}&startblock=0&endblock=99999999&sort=asc&apikey=${API_KEY}`)
+                await axios.get(`https://api.etherscan.io/api?module=account&action=txlist&address=${address}&startblock=0&endblock=99999999&sort=desc&apikey=${API_KEY}`)
                     .then(res => {
                         if (res.data.status === "1") {
                             const data = mapResponseBody(res.data.result);
