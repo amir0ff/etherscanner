@@ -9,6 +9,7 @@ interface Transaction {
     value: number;
     confirmations: number;
     hash: string;
+    blockNumber: number;
 }
 
 function isEthereumAddress(address: string) {
@@ -33,6 +34,7 @@ function useEtherscan(): [(address: string) => void, Transaction[], string, bool
                 'to': element.to,
                 'timeStamp': element.timeStamp,
                 'confirmations': element.confirmations,
+                'blockNumber': element.blockNumber
             }
         ))
     }

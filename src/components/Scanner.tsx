@@ -55,7 +55,8 @@ function Scanner() {
                 <Table responsive striped hover size="sm">
                     <thead>
                     <tr>
-                        <th>TimeStamp</th>
+                        <th>Block</th>
+                        <th>Time</th>
                         <th>From</th>
                         <th>To</th>
                         <th>Value</th>
@@ -66,11 +67,12 @@ function Scanner() {
                     <tbody>
                     {(transactions.map(transaction => (
                         <tr key={transaction.hash}>
-                            <th scope="col"><Moment unix tz="utc">{transaction.timeStamp}</Moment></th>
-                            <td>{transaction.from}</td>
-                            <td>{transaction.to}</td>
-                            <td>{transaction.value}</td>
-                            <td>{transaction.confirmations}</td>
+                            <td><span>{transaction.blockNumber}</span></td>
+                            <th scope="col"><Moment unix tz="utc" format="LL LTS">{transaction.timeStamp}</Moment></th>
+                            <td><span>{transaction.from}</span></td>
+                            <td><span>{transaction.to}</span></td>
+                            <td><span>{transaction.value}</span></td>
+                            <td><span>{transaction.confirmations}</span></td>
                             <td className="hash-td"><span title={transaction.hash}>{transaction.hash}</span></td>
                         </tr>
                     )))}
