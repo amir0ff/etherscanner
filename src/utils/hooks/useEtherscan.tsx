@@ -13,7 +13,8 @@ interface Transaction {
 }
 
 function isEthereumAddress(address: string) {
-    return address.startsWith('0x') && address.length === 42;
+    const regex = /^(0x)[0-9a-f]{40}$/i;
+    return regex.test(address);
 }
 
 /* Etherscan API Key required to bypass call rate limit of 1/5 sec */
