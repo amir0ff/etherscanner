@@ -18,7 +18,7 @@ function isEthereumAddress(address: string) {
 }
 
 /* Etherscan API Key required to bypass call rate limit of 1/5 sec */
-const API_KEY = process.env.ETHERSCAN_API_KEY;
+const API_KEY = process.env.REACT_APP_ETHERSCAN_API_KEY;
 
 function useEtherscan(): [(address: string) => void, Transaction[], string, boolean] {
     const [transactions, setTransactions] = useState([]);
